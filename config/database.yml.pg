@@ -6,6 +6,7 @@ development:
   database: instagram_ish
   pool: 5
   username: root
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -17,6 +18,7 @@ test:
   database: instagram_ish
   pool: 5
   username: root
+  password: 
   host: localhost
 
 production:
@@ -25,4 +27,5 @@ production:
   database: instagram_ish
   pool: 5
   username: root
+  password: 
   host: localhost

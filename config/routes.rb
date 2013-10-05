@@ -1,5 +1,12 @@
 InstagramIsh::Application.routes.draw do
   resources :photos
+  resources :photos_api
+
+  # get '/api/index', to: 'photos_api#index'
+  # get '/api/show', to: 'photos_api#show'
+  # post '/api/create', to: 'photos_api#create'
+  # put '/api/update', to: 'photos_api#update'
+  # delete '/api/destroy', to: 'photos_api#destroy'
 
 
   # The priority is based upon order of creation:

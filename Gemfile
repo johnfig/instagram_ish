@@ -9,7 +9,9 @@ gem 'sqlite3'
 gem "paperclip", "~> 3.5.1"
 gem "yaml_db", "~> 0.2.3"
 gem "pg"
-
+gem 'rspec-rails', '2.11.0'
+gem "factory_girl", "~> 4.2.0"
+gem "awesome_print", "~> 1.2.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,6 +25,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.2.0'
+  gem 'database_cleaner', '0.7.0'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
