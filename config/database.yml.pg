@@ -5,6 +5,7 @@ development:
   encoding: unicode
   database: instagram_ish
   pool: 5
+  username: root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -15,6 +16,7 @@ test:
   encoding: unicode
   database: instagram_ish
   pool: 5
+  username: root
   host: localhost
 
 production:
@@ -22,4 +24,5 @@ production:
   encoding: unicode
   database: instagram_ish
   pool: 5
+  username: root
   host: localhost
