@@ -1,42 +1,47 @@
 class PhotosApiController < ApplicationController
 
+	# GET /photo_api
+	# Array of Hashes to be iterated over
 	def index
 		@photos = Photo.all
 
-		# respond_to do |format|
-  #     format.json { render json: @photos }
-  #   end
-    hash = {}
+    array = []
     @photos.each do |photo|
-    	@single_hash = {
+    	photo_push = {
     		id: photo.id,
     		name: photo.name,
     		photo: photo.photo.url
     	}
-    	ap @single_hash
+
+    	array << photo_push
     end
 
-    plist = @single_hash
-    render json: plist
+    render json: array
 	end
 
+	# GET /photos_api/show/1.json
 	def show
-		@photo = Photo.find(params[:photo_id])
+		@photo = Photo.find(params[:id])
 
-		@photo.to_json
+		render json: @photo
 	end
 
+	# POST /photos_api
 	def create
 		# need to understand iOS better to do this
 	end
 
+	# PUT /photos_api/1
 	def update
 		# need to understand iOS better to do this
 	end
 
+	# DELETE /photos_api/1
 	def destroy
-		@photo = Photo.find(params[:photo_id])
+		@photo = Photo.find(params[:id])
 		@photo.destroy
+
+		render json: @photo
 	end
 
 end
