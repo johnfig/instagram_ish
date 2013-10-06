@@ -5,21 +5,20 @@ class PhotosApiController < ApplicationController
 	def index
 		@photos = Photo.all
 
-    array = []
-    @photos.each do |photo|
+    array = @photos.map do |photo|
     	photo_push = {
     		id: photo.id,
     		name: photo.name,
     		photo: photo.photo.url
     	}
 
-    	array << photo_push
+    	photo_push
     end
 
     render json: array
 	end
 
-	# GET /photos_api/show/1.json
+	# GET /photos_api/1
 	def show
 		@photo = Photo.find(params[:id])
 
