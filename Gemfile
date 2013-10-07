@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '3.2.13'
+gem 'rails_12factor'
 gem "paperclip", "~> 3.5.1"
 gem 'aws-sdk'
 gem "yaml_db", "~> 0.2.3"
