@@ -21,8 +21,13 @@ class PhotosApiController < ApplicationController
 	# GET /photos_api/1
 	def show
 		@photo = Photo.find(params[:id])
+		photo_hash = {
+		  id: 	 @photo.id,
+		  name:  @photo.name,
+		  photo: @photo.photo.url
+		}
 
-		render json: @photo
+		render json: photo_hash
 	end
 
 	# POST /photos_api

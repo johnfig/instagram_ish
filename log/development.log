@@ -5811,3 +5811,23 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 09:20:29 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/photos_api" for 127.0.0.1 at 2013-10-07 10:20:13 -0700
+Processing by PhotosApiController#index as HTML
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" 
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/photos_api/1" for 127.0.0.1 at 2013-10-07 10:20:15 -0700
+Processing by PhotosApiController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (2.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/photos_api/1" for 127.0.0.1 at 2013-10-07 10:20:15 -0700
+Processing by PhotosApiController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms)
