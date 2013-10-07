@@ -5831,3 +5831,98 @@ Processing by PhotosApiController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT 1  [["id", "1"]]
 Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Processing by PhotosController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" [0m
+  Rendered photos/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 87ms (Views: 36.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 13:09:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2013-10-07 13:10:39 -0700
+Processing by PhotosController#index as HTML
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" 
+  Rendered photos/index.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `photo_image' for #<#<Class:0x007fd45d96ce48>:0x007fd45d9fbf30>):
+    10: <% @photos.each do |photo| %>
+    11:   <tr>
+    12:     <% photo_image = photo.photo.url.gsub('s3', "s3-us-west-2") %>
+    13:     <td><%= image_tag photo_image(:small) %></td>
+    14:     <td><%= link_to 'Show', photo %></td>
+    15:     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    16:     <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/photos/index.html.erb:13:in `block in _app_views_photos_index_html_erb__384469832579110844_70275040269680'
+  app/views/photos/index.html.erb:10:in `each'
+  app/views/photos/index.html.erb:10:in `_app_views_photos_index_html_erb__384469832579110844_70275040269680'
+  app/controllers/photos_controller.rb:7:in `index'
+
+
+  Rendered /Users/johnfigueiredo/.rvm/rubies/ruby-1.9.3-head/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/johnfigueiredo/.rvm/rubies/ruby-1.9.3-head/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/johnfigueiredo/.rvm/rubies/ruby-1.9.3-head/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2013-10-07 13:11:09 -0700
+Processing by PhotosController#index as HTML
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" [0m
+  Rendered photos/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /photos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /photos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
