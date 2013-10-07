@@ -5926,3 +5926,15 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 13:11:10 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/photos_api" for 127.0.0.1 at 2013-10-07 13:24:19 -0700
+Processing by PhotosApiController#index as HTML
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT "photos".* FROM "photos" 
+Completed 200 OK in 56ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/photos_api" for 127.0.0.1 at 2013-10-07 13:27:11 -0700
+Processing by PhotosApiController#index as HTML
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" [0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms)
