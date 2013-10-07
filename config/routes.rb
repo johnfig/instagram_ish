@@ -2,6 +2,8 @@ InstagramIsh::Application.routes.draw do
   resources :photos
   resources :photos_api
 
+  root to: 'photos#index'
+
   # get '/api/index', to: 'photos_api#index'
   # get '/api/show', to: 'photos_api#show'
   # post '/api/create', to: 'photos_api#create'
