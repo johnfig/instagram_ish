@@ -7,9 +7,6 @@ gem "paperclip", "~> 3.5.1"
 gem 'aws-sdk'
 gem "yaml_db", "~> 0.2.3"
 gem "pg"
-gem 'rspec-rails', '2.11.0'
-gem "factory_girl", "~> 4.2.0"
-gem "awesome_print", "~> 1.2.0"
 gem 'jquery-rails'
 
 group :assets do
@@ -23,6 +20,9 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
   gem 'database_cleaner', '0.7.0'
   gem 'debugger'
+  gem 'rspec-rails', '2.11.0'
+	gem "factory_girl", "~> 4.2.0"
+	gem "awesome_print", "~> 1.2.0"
 end
 
 # To use ActiveModel has_secure_password
@@ -36,6 +36,4 @@ end
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
 
