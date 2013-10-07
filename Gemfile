@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'sqlite3', '1.3.8'
 gem "paperclip", "~> 3.5.1"
 gem 'aws-sdk'
 gem "yaml_db", "~> 0.2.3"
