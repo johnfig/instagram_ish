@@ -3,9 +3,6 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.all
-    @photos.each do |photo|
-      photo.photo.url.gsub!('s3', 's3-us-west-2')
-    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +14,6 @@ class PhotosController < ApplicationController
   # GET /photos/1.json
   def show
     @photo = Photo.find(params[:id])
-    @photo.photo.url.gsub!('s3', 's3-us-west-2')
 
     respond_to do |format|
       format.html # show.html.erb

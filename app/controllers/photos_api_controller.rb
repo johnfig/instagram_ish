@@ -9,7 +9,7 @@ class PhotosApiController < ApplicationController
     	photo_push = {
     		id: photo.id,
     		name: photo.name,
-    		photo: photo.photo.url.gsub!('s3', 's3-us-west-2')
+    		photo: photo.photo.url.gsub!('s3', 's3-us-west-2') || photo.photo.url
     	}
 
     	photo_push
@@ -24,7 +24,7 @@ class PhotosApiController < ApplicationController
 		photo_hash = {
 		  id: 	 @photo.id,
 		  name:  @photo.name,
-		  photo: @photo.photo.url.gsub!('s3', 's3-us-west-2')
+		  photo: @photo.photo.url.gsub!('s3', 's3-us-west-2') || @photo.photo.url
 		}
 
 		render json: photo_hash
