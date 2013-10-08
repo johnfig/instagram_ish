@@ -2,7 +2,6 @@
 
 <%= @photo.name %>
 <br>
-<% @photo.photo.url.gsub('s3', "s3-us-west-2") %>
 <%= image_tag @photo.photo.url(:small) %>
 <br>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

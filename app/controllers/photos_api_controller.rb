@@ -6,11 +6,10 @@ class PhotosApiController < ApplicationController
 		@photos = Photo.all
 
     array = @photos.map do |photo|
-    	photo_image = photo.photo.url.gsub!('s3', "s3-us-west-2")
     	photo_push = {
     		id: photo.id,
     		name: photo.name,
-    		photo: photo_image
+    		photo: photo.photo.url
     	}
 
     	photo_push
@@ -22,12 +21,10 @@ class PhotosApiController < ApplicationController
 	# GET /photos_api/1
 	def show
 		@photo = Photo.find(params[:id])
-		photo_image = @photo.photo.url.gsub!('s3', "s3-us-west-2")
-
 		photo_hash = {
 		  id: 	 @photo.id,
 		  name:  @photo.name,
-		  photo: photo_image
+		  photo: @photo.photo.url
 		}
 
 		render json: photo_hash
