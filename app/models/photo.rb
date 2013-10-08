@@ -10,7 +10,6 @@ class Photo < ActiveRecord::Base
                     :convert_options => { :thumb => "-quality 92", :medium => "-quality 92", :large => "-quality 92"  },
                     :storage => :s3,
 								    :s3_credentials => {
-								      :bucket => ENV['AWS_BUCKET'],
 								      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
 								      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
 								    }
