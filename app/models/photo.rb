@@ -12,6 +12,7 @@ class Photo < ActiveRecord::Base
 	after_create :amazon_url_update
 
 	def amazon_url_update
-		self.photo.url = self.photo.url.gsub!('s3', "s3-us-west-2")
+		new_url = self.photo.url.gsub!("s3", "s3-us-west-2")
+		self.photo.url = new_url
 	end
 end

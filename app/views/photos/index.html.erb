@@ -9,7 +9,7 @@
 
 <% @photos.each do |photo| %>
   <tr>
-    <% photo.photo.url.gsub('s3', "s3-us-west-2") %>
+    <% @image = photo.photo.url.gsub('s3', "s3-us-west-2") %>
     <td><%= image_tag photo.photo.url(:small) %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
