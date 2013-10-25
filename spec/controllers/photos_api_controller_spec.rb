@@ -26,7 +26,7 @@ describe PhotosApiController do
 
 	context '#create' do
 		it 'test'
-	end
+  end
 
 	context '#update' do
 		it 'test'
