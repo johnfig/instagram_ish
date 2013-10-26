@@ -9,6 +9,7 @@ class PhotosApiController < ApplicationController
     	photo_push = {
     		id: 	 photo.id,
     		name:  photo.name,
+        user_name: photo.user.full_name,
     		photo: photo.photo.url
     	}
 
@@ -24,6 +25,7 @@ class PhotosApiController < ApplicationController
 		photo_hash = {
 		  id: 	 @photo.id,
 		  name:  @photo.name,
+      user_name: @photo.user.full_name,
 		  photo: @photo.photo.url
 		}
 

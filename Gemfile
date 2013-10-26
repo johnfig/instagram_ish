@@ -24,6 +24,7 @@ group :test do
   gem 'rspec-rails', '2.11.0'
 	gem "factory_girl", "~> 4.2.0"
 	gem "awesome_print", "~> 1.2.0"
+  gem "pry", "~> 0.9.12.2"
 end
 
 # To use ActiveModel has_secure_password
