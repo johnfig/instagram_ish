@@ -7,6 +7,8 @@ gem 'aws-sdk'
 gem "yaml_db", "~> 0.2.3"
 gem "pg"
 gem 'jquery-rails'
+gem 'devise'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -25,7 +27,7 @@ group :test do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
