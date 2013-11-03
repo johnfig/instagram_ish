@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe PhotosApiController do
-	let(:photo) { FactoryGirl.create :photo }
+  let(:user)  { FactoryGirl.create :user }
+	let(:photo) { FactoryGirl.create :photo, user: user }
 
 	context "#index" do
 		it "should show both photos in a nested json hash" do
 			photo
-			photo_2 = FactoryGirl.create :photo, name: "Other Guy"
+			photo_2 = FactoryGirl.create :photo, name: "Other Guy", user: user
+      photo_2
 
 			get :index
 
